@@ -224,6 +224,24 @@ html[lang=en] .pc-latin{display:none}
   .pc-grid>div:nth-child(3){display:none}
   .pintro h2{font-size:30px}
 }
+@media(max-width:760px){
+  /* phones: fit the pinned tracks view to the visible screen (svh excludes the browser's bars) */
+  .pin{height:100vh;height:100svh;padding-top:62px}
+  .stage{height:15vh;height:15svh;min-height:96px}
+  .pinfo{height:calc(100vh - 62px - 15vh);height:calc(100svh - 62px - 15svh)}
+  /* tighter card so every track fits on short phone screens without hiding any text */
+  .pcard{padding:14px 16px 12px}
+  .pc-num{font-size:24px}.pcard h3{font-size:20px;margin-top:4px}
+  .pc-grid{gap:6px;margin-top:10px;padding-top:10px}
+  .pc-grid dt{font-size:12px;margin-bottom:1px}
+  .pc-grid dd{font-size:12.5px;line-height:1.5}
+  .pc-q{margin-top:10px;padding:8px 12px}.pc-q span{font-size:12px}.pc-q p{font-size:13px;line-height:1.5}
+  .pcard .tpick{margin-top:10px}
+}
+@media(max-width:760px) and (max-height:700px){
+  .stage{height:12vh;height:12svh;min-height:76px}
+  .pinfo{height:calc(100vh - 62px - 12vh);height:calc(100svh - 62px - 12svh)}
+}
 
 /* TEAM */
 .team{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%)}
@@ -1246,7 +1264,10 @@ document.getElementById('solobtn').addEventListener('click',()=>{const r=documen
 
 // mobile sticky CTA
 (function(){const m=document.getElementById('mcta'),r=document.getElementById('register');
- const f=()=>{const rr=r.getBoundingClientRect();m.classList.toggle('show',scrollY>innerHeight*.8&&rr.top>innerHeight*.6);};addEventListener('scroll',f,{passive:true});f();})();
+ const pil=document.querySelector('.pillars');
+ // hidden while the pinned tracks view fills the screen, so it never covers a track card
+ const f=()=>{const rr=r.getBoundingClientRect(),pr=pil.getBoundingClientRect(),inTracks=pr.top<innerHeight*.5&&pr.bottom>innerHeight*.5;
+  m.classList.toggle('show',scrollY>innerHeight*.8&&rr.top>innerHeight*.6&&!inTracks);};addEventListener('scroll',f,{passive:true});f();})();
 // reveal etc.
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
 document.querySelectorAll('.rv,#jr').forEach(el=>io.observe(el));
