@@ -1,5 +1,7 @@
-# Agentathon | وكيلثون — public preview
+# AGENTHON · إيجنتثون — public preview
 
-Static build of the Agentathon home page (the team's original site with the enhanced 3D festival background and the Al-Ahsa Palm logo), published with GitHub Pages.
+Static preview of the AGENTHON (AI Agents Hackathon, Eastern Province) landing page, published with GitHub Pages.
 
-This is a design preview: the application form is not connected to a server here, and organizer sign-in is not included. The source lives in the main Agentathon project.
+The hero is the Al Khobar skyline image animated with a WebGL shader (moving water and reflections, twinkling lights, a blinking beacon, and the brand waves). The footer credits ITCAN and Sahseh.
+
+This is a design preview: the application form does not submit anywhere, and the page is set to `noindex`.
