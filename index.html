@@ -85,8 +85,8 @@ nav .lockup .word{font-size:19px}
 .hero.has3d .skyline,.hero.has3d .waves{display:none}
 .hero.has3d #net{display:none}
 /* the skyline photo: shown as-is if WebGL is unavailable, animated by the canvas otherwise */
-.hero.has3d .hero-sky,[dir=rtl] .hero.has3d .hero-sky{transform:none;background:#0B1235 url(assets/hero-khobar.jpg) 60% 50%/cover no-repeat}
-@media(max-aspect-ratio:1/1){.hero.has3d .hero-sky,[dir=rtl] .hero.has3d .hero-sky{background-position:72% 50%}}
+.hero.has3d .hero-sky,[dir=rtl] .hero.has3d .hero-sky{transform:none;background:#0B1235 url(assets/hero-waterfront.jpg) 60% 50%/cover no-repeat}
+@media(max-aspect-ratio:1/1){.hero.has3d .hero-sky,[dir=rtl] .hero.has3d .hero-sky{background-position:13% 50%}}
 .hero .wrap{position:relative;z-index:3;width:100%}
 /* centred hero content */
 .hero.has3d .wrap{text-align:center}
@@ -459,6 +459,18 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
   .skyline{width:120vw;opacity:.22;bottom:180px}
   .countdown{width:100%}.cd{flex:1;min-width:0}
   .hero-ctas .btn{flex:1;justify-content:center}
+}
+/* phones: keep the AGENTHON lockup and the Sharqiyah lockup on one line */
+@media(max-width:760px){
+  .banner,[dir=rtl] .banner{flex-wrap:nowrap;gap:clamp(8px,3vw,14px)}
+  .banner .vbar{display:block;align-self:center;height:clamp(30px,10vw,44px)}
+  .banner .lockup{gap:clamp(6px,2.4vw,10px)}
+  .banner .lockup .mark{width:clamp(28px,9vw,40px)}
+  .banner .lockup .word{font-size:clamp(18px,6.2vw,30px)}
+  .banner .lockup .ltag{font-size:clamp(5.5px,1.75vw,7.5px);letter-spacing:.16em;margin-top:6px}
+  .sharq{gap:3px}
+  .sharq b{font-size:clamp(15px,5vw,24px)}
+  .sharq span{font-size:clamp(5.5px,1.75vw,7.5px);letter-spacing:.16em}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
@@ -1339,8 +1351,8 @@ let visible=true;new IntersectionObserver(es=>{visible=es[0].isIntersecting},{ro
 </script>
 <script>
 // ---------- HERO: the Khobar skyline photo, brought to life ----------
-// One full-screen shader over assets/hero-khobar.jpg: rippling water that moves the reflections,
-// glints, twinkling corniche lights, a blinking beacon on the spire, faint stars, a slow drift and
+// One full-screen shader over assets/hero-waterfront.jpg: rippling water that moves the reflections,
+// glints, twinkling corniche lights, a soft glow breathing on the gold tower, faint stars, a slow drift and
 // mouse parallax, a soft glow around the lights, and the brand's glossy waves along the bottom.
 (function(){
 const hero=document.querySelector('.hero'),canvas=document.getElementById('city');
@@ -1351,7 +1363,7 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const R=new THREE.WebGLRenderer({canvas,antialias:false,alpha:false});
 R.setPixelRatio(Math.min(devicePixelRatio||1,2));
 const scene=new THREE.Scene(),cam=new THREE.OrthographicCamera(-1,1,1,-1,0,1);
-const IMG={w:1800,h:844,horizon:1-628/844,beacon:[1368/1800,1-228/844]};
+const IMG={w:1800,h:844,horizon:1-555/844,beacon:[1665/1800,1-430/844]};   // shoreline row; crown of the gold tower
 const U={tex:{value:null},res:{value:new THREE.Vector2(1,1)},img:{value:new THREE.Vector2(IMG.w,IMG.h)},
   focal:{value:new THREE.Vector2(.6,.45)},mouse:{value:new THREE.Vector2()},time:{value:0},zoom:{value:1.03},scl:{value:.72},
   hz:{value:IMG.horizon},beacon:{value:new THREE.Vector2(...IMG.beacon)}};
@@ -1408,9 +1420,9 @@ const mat=new THREE.ShaderMaterial({uniforms:U,depthTest:false,depthWrite:false,
       // soft glow around the bright lights (from a blurred mip level)
       vec3 bl=texture2D(tex,s,4.).rgb;
       col+=max(bl-vec3(.5),0.)*.6*smoothstep(hz+.16,hz+.04,uv.y)*smoothstep(0.,.12,bl.r-bl.b);
-      // beacon on the spire
-      float bd=length((uv-beacon)*vec2(ia,1.)),bk=smoothstep(.15,.45,sin(t*2.6));
-      col+=vec3(1.,.38,.32)*(exp(-pow(bd/.0045,2.))*1.3+exp(-bd/.02)*.18)*bk;
+      // a slow golden breath around the crown of the tower
+      float bd=length((uv-beacon)*vec2(ia,1.));
+      col+=vec3(1.,.8,.48)*exp(-bd/.03)*.13*(.55+.45*sin(t*1.1));
       // the brand waves
       vec2 p=vUv;
       col=ribbon(col,p,-1.,.1,.11,7.5,.6,.28,vec3(.02,.07,.32),vec3(.07,.33,1.),vec3(.4,.85,1.)*1.1,.88);
@@ -1423,7 +1435,11 @@ scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),mat));
 function size(){
   const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;
   R.setSize(w,h,false);U.res.value.set(w,h);
-  U.focal.value.set(w/h<1?.72:.6,.45);           // keep the tower in frame on phones
+  if(w/h<1){
+    // phones: show the photo larger, with the white landmark (x=.15 of the photo) at ~22% from the left, clear of the centred text
+    const span=(w/h)/(IMG.w/IMG.h)/1.035;
+    U.scl.value=1;U.focal.value.set(.15+(.5-.22)*span,.45);
+  }else{U.scl.value=.72;U.focal.value.set(.6,.45);}
 }
 addEventListener('resize',size);size();
 
@@ -1440,7 +1456,7 @@ function frame(now){
   U.time.value=t;U.mouse.value.set(px,-py);U.zoom.value=1.035+(reduce?0:.02*Math.sin(t*.06));
   R.render(scene,cam);
 }
-new THREE.TextureLoader().load('assets/hero-khobar.jpg',tex=>{
+new THREE.TextureLoader().load('assets/hero-waterfront.jpg',tex=>{
   tex.minFilter=THREE.LinearMipmapLinearFilter;tex.generateMipmaps=true;tex.anisotropy=R.capabilities.getMaxAnisotropy();
   U.tex.value=tex;size();
   if(!running){running=true;requestAnimationFrame(t=>{frame(t);canvas.classList.add('on');});}
