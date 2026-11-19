@@ -521,7 +521,11 @@ input::placeholder{color:rgba(167,163,211,.55)}
 .drop:focus-within{border-color:var(--teal);box-shadow:0 0 0 4px rgba(34,197,195,.12)}
 .drop input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
 .drop svg{width:20px;height:20px;flex:none;color:var(--teal)}
-.drop .dz-t{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.drop .dz-t{min-width:0;line-height:1.45}
+.drop.has .dz-t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* let the form and its fields shrink to the card on phones */
+.reg-card>*,#form>*,.row2>*,.cvf,.drop{min-width:0}
+label.f{align-content:start}
 .cvf .hint{font-size:12.5px;color:var(--muted)}
 .fe{font-size:13px;color:#FF9C9C;line-height:1.5}
 .fe:empty{display:none}
@@ -539,6 +543,8 @@ html[lang=ar] .pt-h{letter-spacing:0;font-size:15px}
 /* logos show in white; a colour logo file shows its own colours on hover */
 .pt-logo img{display:block;max-width:100%;max-height:42px;width:auto;height:auto;filter:grayscale(1) brightness(0) invert(1);opacity:.82;transition:filter .25s,opacity .25s}
 .pt-logo.lg img{max-height:70px}
+.pt-logo:not(.lg) img{max-height:56px}
+.pt-logo img.tall{max-height:66px}
 .pt-logo .pt-name{font-size:22px;font-weight:700;color:var(--lav);letter-spacing:.02em;opacity:.85}
 .pt-logo:hover{border-color:rgba(155,107,255,.55);background:rgba(123,63,255,.08)}
 .pt-logo:hover img{filter:none;opacity:1}
@@ -553,7 +559,7 @@ html[lang=ar] .pt-h{letter-spacing:0;font-size:15px}
   nav .lockup{gap:6px}
   .nav-cta{font-size:12px;padding:8px 10px}
 }
-@media(max-width:600px){.pt-logo{flex-basis:calc(50% - 8px);height:92px;padding:16px}.pt-logo.lg{flex-basis:100%;height:128px}.pt-logo img{max-height:34px}.pt-logo.lg img{max-height:58px}}
+@media(max-width:600px){.pt-logo{flex-basis:calc(50% - 8px);height:92px;padding:16px}.pt-logo.lg{flex-basis:100%;height:128px}.pt-logo img,.pt-logo:not(.lg) img{max-height:46px}.pt-logo img.tall{max-height:56px}.pt-logo.lg img{max-height:58px}}
 @media(max-width:760px){.prizes{padding-bottom:56px}#journey{padding-top:56px}.partners{padding:80px 0 90px}.intro{padding:100px 0 24px}}
 </style>
 </head>
@@ -850,8 +856,8 @@ html[lang=ar] .pt-h{letter-spacing:0;font-size:15px}
         <div class="pt-logo lg"><img src="assets/sahseh.svg" alt="Sahseh" width="176" height="60" loading="lazy"></div>
       </div>
       <div class="pt-logos">
-        <div class="pt-logo"><span class="pt-name latin">DTV</span></div>
-        <div class="pt-logo"><span class="pt-name" data-t="ptKath"></span></div>
+        <div class="pt-logo"><img src="assets/dtv.png" alt="DTV · Dhahran Techno Valley" width="573" height="240" loading="lazy"></div>
+        <div class="pt-logo"><img class="tall" src="assets/katheeb.png" alt="Katheeb Tour" width="348" height="300" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -1084,7 +1090,7 @@ const T={
   sarL:"Saudi riyals",
   fPhone:"Mobile number *",
   fCv:"CV *",
-  cvPick:"Drag your PDF here or click to choose",
+  cvPick:"Drag a PDF here or browse",
   cvHint:"PDF only, max 5 MB",
   fIdea:"Your idea in brief: what will your agent do? *",
   eReq:"This field is required.",
