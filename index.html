@@ -289,7 +289,17 @@ html[lang=en] .pc-latin{display:none}
 .mrow input,.mrow select{padding:11px 12px;font-size:14px}
 .mrow .rm{font:inherit;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;font-size:18px;line-height:1}
 .mrow .rm:hover{border-color:#9B6BFF;color:#fff}
-@media(max-width:700px){.mrow{grid-template-columns:auto 1fr auto}.mrow input[type=email]{grid-column:2/3}}
+.mhead{flex-wrap:wrap;gap:2px 12px}
+.mhead small{white-space:nowrap}
+/* phones: number · name · remove on one line, email full width under the name */
+@media(max-width:700px){
+  .mrow{grid-template-columns:28px minmax(0,1fr) 32px;grid-template-areas:"n name rm" ". email email";gap:8px 10px}
+  .mrow .mn{grid-area:n}
+  .mrow input[data-k=n]{grid-area:name}
+  .mrow input[data-k=e]{grid-area:email}
+  .mrow .rm{grid-area:rm}
+  .mrow+.mrow{padding-top:12px;border-top:1px solid var(--line)}
+}
 .addm{font:inherit;justify-self:start;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;border:1px dashed rgba(155,107,255,.6);background:rgba(123,63,255,.08);color:var(--lav);cursor:pointer;font-size:14px}
 .addm[disabled]{opacity:.4;cursor:not-allowed}
 .solonote{display:none;font-size:14px;color:var(--lav);padding:14px 16px;border-radius:14px;background:rgba(34,197,195,.08);border:1px solid rgba(34,197,195,.35)}
