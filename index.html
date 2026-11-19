@@ -85,7 +85,7 @@ nav .lockup .word{font-size:19px}
 .hero.has3d .skyline,.hero.has3d .waves{display:none}
 .hero.has3d #net{display:none}
 /* the skyline photo: shown as-is if WebGL is unavailable, animated by the canvas otherwise */
-.hero.has3d .hero-sky,[dir=rtl] .hero.has3d .hero-sky{transform:none;background:#0B1235 url(assets/hero-waterfront.jpg) 60% 50%/cover no-repeat}
+.hero.has3d .hero-sky,[dir=rtl] .hero.has3d .hero-sky{transform:none;background:#0B1235 url(assets/hero-waterfront-2.jpg) 60% 50%/cover no-repeat}
 @media(max-aspect-ratio:1/1){.hero.has3d .hero-sky,[dir=rtl] .hero.has3d .hero-sky{background-position:13% 50%}}
 .hero .wrap{position:relative;z-index:3;width:100%}
 /* centred hero content */
@@ -1351,7 +1351,7 @@ let visible=true;new IntersectionObserver(es=>{visible=es[0].isIntersecting},{ro
 </script>
 <script>
 // ---------- HERO: the Khobar skyline photo, brought to life ----------
-// One full-screen shader over assets/hero-waterfront.jpg: rippling water that moves the reflections,
+// One full-screen shader over assets/hero-waterfront-2.jpg: rippling water that moves the reflections,
 // glints, twinkling corniche lights, a soft glow breathing on the gold tower, faint stars, a slow drift and
 // mouse parallax, a soft glow around the lights, and the brand's glossy waves along the bottom.
 (function(){
@@ -1363,9 +1363,9 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const R=new THREE.WebGLRenderer({canvas,antialias:false,alpha:false});
 R.setPixelRatio(Math.min(devicePixelRatio||1,2));
 const scene=new THREE.Scene(),cam=new THREE.OrthographicCamera(-1,1,1,-1,0,1);
-const IMG={w:1800,h:844,horizon:1-555/844,beacon:[1665/1800,1-430/844]};   // shoreline row; crown of the gold tower
+const IMG={w:1832,h:859,horizon:1-563/859,beacon:[1695/1832,1-430/859]};   // shoreline row; crown of the gold tower
 const U={tex:{value:null},res:{value:new THREE.Vector2(1,1)},img:{value:new THREE.Vector2(IMG.w,IMG.h)},
-  focal:{value:new THREE.Vector2(.6,.45)},mouse:{value:new THREE.Vector2()},time:{value:0},zoom:{value:1.03},scl:{value:.72},
+  focal:{value:new THREE.Vector2(.6,.45)},mouse:{value:new THREE.Vector2()},time:{value:0},zoom:{value:1.035},scl:{value:.72},
   hz:{value:IMG.horizon},beacon:{value:new THREE.Vector2(...IMG.beacon)}};
 const mat=new THREE.ShaderMaterial({uniforms:U,depthTest:false,depthWrite:false,
   vertexShader:`varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}`,
@@ -1393,8 +1393,6 @@ const mat=new THREE.ShaderMaterial({uniforms:U,depthTest:false,depthWrite:false,
         // above the photo: continue its sky (blurred top row) and deepen it toward the nav
         vec3 top=texture2D(tex,vec2(uv.x,.995),3.).rgb;
         col=mix(top,top*.72+vec3(.043,.07,.21)*.28,smoothstep(.995,1.25,uv.y));
-        vec2 sg=uv*img*.6,sc=floor(sg);float sh=h21(sc);
-        col+=vec3(.9,.9,1.)*step(.9986,sh)*(1.-smoothstep(0.,.35,length(fract(sg)-.5)))*(.45+.55*sin(t*2.+sh*40.))*.55;
       }else if(uv.y<hz){
         // water: ripples bunch up toward the shoreline (perspective) and grow toward the viewer
         float d=hz-uv.y,z=1./(d+.015),fade=smoothstep(0.,.012,d);
@@ -1407,15 +1405,7 @@ const mat=new THREE.ShaderMaterial({uniforms:U,depthTest:false,depthWrite:false,
         float g=pow(max(0.,sin(uv.x*900.+t*3.+z*2.)*sin(z*6.-t*2.4)),8.)*smoothstep(.35,.75,lum);
         col+=col*g*.6*fade;
       }else{
-        col=texture2D(tex,s).rgb;
-        // corniche and window lights twinkle
-        float band=smoothstep(hz+.2,hz+.02,uv.y),lum=dot(col,vec3(.299,.587,.114));
-        vec2 cell=floor(uv*img*.5);
-        float tw=.5+.5*sin(t*(1.5+h21(cell)*3.)+h21(cell+7.)*6.283);
-        col*=1.+band*smoothstep(.45,.85,lum)*smoothstep(0.,.15,col.r-col.b)*(tw-.5)*.55;
-        // faint stars high in the sky
-        vec2 sg=uv*img*.6,sc=floor(sg);float sh=h21(sc);
-        col+=vec3(.9,.9,1.)*step(.9986,sh)*smoothstep(.55,.85,uv.y)*(1.-smoothstep(0.,.35,length(fract(sg)-.5)))*(.45+.55*sin(t*2.+sh*40.))*.55;
+        col=texture2D(tex,s).rgb;   // above the waterline the photo stays still
       }
       // soft glow around the bright lights (from a blurred mip level)
       vec3 bl=texture2D(tex,s,4.).rgb;
@@ -1438,25 +1428,22 @@ function size(){
   if(w/h<1){
     // phones: show the photo larger, with the white landmark (x=.15 of the photo) at ~22% from the left, clear of the centred text
     const span=(w/h)/(IMG.w/IMG.h)/1.035;
-    U.scl.value=1;U.focal.value.set(.15+(.5-.22)*span,.45);
+    U.scl.value=1;U.focal.value.set(.153+(.5-.22)*span,.45);
   }else{U.scl.value=.72;U.focal.value.set(.6,.45);}
 }
 addEventListener('resize',size);size();
 
-let mx=0,my=0,px=0,py=0,visible=true,running=false;
-hero.addEventListener('mousemove',e=>{const b=hero.getBoundingClientRect();mx=(e.clientX-b.left)/b.width-.5;my=(e.clientY-b.top)/b.height-.5;});
-hero.addEventListener('mouseleave',()=>{mx=0;my=0;});
+let visible=true,running=false;
 new IntersectionObserver(es=>{visible=es[0].isIntersecting},{rootMargin:'120px'}).observe(hero);
 const t0=performance.now();
 function frame(now){
   if(!reduce)requestAnimationFrame(frame);
   if(!visible&&!reduce)return;
   const t=reduce?0:(now-t0)/1000;
-  px+=(mx-px)*.05;py+=(my-py)*.05;
-  U.time.value=t;U.mouse.value.set(px,-py);U.zoom.value=1.035+(reduce?0:.02*Math.sin(t*.06));
+  U.time.value=t;                                   // photo is fixed: no zoom drift, no parallax
   R.render(scene,cam);
 }
-new THREE.TextureLoader().load('assets/hero-waterfront.jpg',tex=>{
+new THREE.TextureLoader().load('assets/hero-waterfront-2.jpg',tex=>{
   tex.minFilter=THREE.LinearMipmapLinearFilter;tex.generateMipmaps=true;tex.anisotropy=R.capabilities.getMaxAnisotropy();
   U.tex.value=tex;size();
   if(!running){running=true;requestAnimationFrame(t=>{frame(t);canvas.classList.add('on');});}
