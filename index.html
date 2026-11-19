@@ -496,6 +496,65 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
   .sharq span{font-size:clamp(5.5px,1.75vw,7.5px);letter-spacing:.16em}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+/* ---- approved copy update ---- */
+.intro{padding:140px 0 34px}
+.challenge h2{margin-top:0}
+.pc-p{font-size:16px;color:var(--lav);line-height:1.75;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.pc-q p{margin-top:0}
+.sar{display:inline-block;height:.7em;width:.627em;fill:currentColor;vertical-align:baseline;flex:none}
+.pool .big .sar{color:var(--teal);margin-right:.2em}
+.pod .amt .sar{color:var(--lav);margin-right:.22em;opacity:.85}
+.prizes{padding-bottom:70px}
+#journey{padding-top:70px}
+#journey h2{margin-top:0}
+.step p{max-width:300px;margin-inline:auto}
+#faq h2{margin-top:0}
+.reg-side h2{margin-top:0}
+input[type=tel]{font:inherit;font-size:15px;color:#fff;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:14px 16px;outline:none;transition:.2s;width:100%}
+input[type=tel]:focus{border-color:var(--teal);box-shadow:0 0 0 4px rgba(34,197,195,.12)}
+input::placeholder{color:rgba(167,163,211,.55)}
+[dir=rtl] input[type=tel],[dir=rtl] input[type=email]{text-align:right}
+.cvf{display:grid;gap:8px;font-size:14px;color:var(--muted);align-content:start}
+.drop{position:relative;display:flex;align-items:center;gap:12px;min-height:52px;padding:12px 16px;border:1px dashed rgba(155,107,255,.6);border-radius:14px;background:rgba(123,63,255,.06);color:var(--lav);cursor:pointer;transition:.2s;font-size:14px}
+.drop:hover,.drop.over{border-color:var(--teal);background:rgba(34,197,195,.08)}
+.drop.has{border-style:solid;border-color:var(--purple-2);background:rgba(123,63,255,.14);color:#fff}
+.drop:focus-within{border-color:var(--teal);box-shadow:0 0 0 4px rgba(34,197,195,.12)}
+.drop input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.drop svg{width:20px;height:20px;flex:none;color:var(--teal)}
+.drop .dz-t{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cvf .hint{font-size:12.5px;color:var(--muted)}
+.fe{font-size:13px;color:#FF9C9C;line-height:1.5}
+.fe:empty{display:none}
+input.bad,textarea.bad,.drop.bad{border-color:#FF8A8A!important;box-shadow:0 0 0 4px rgba(255,120,120,.12)}
+.opts.bad .opt span{border-color:#FF8A8A}
+.partners{text-align:center;padding:110px 0 120px;border-top:1px solid var(--line)}
+.partners h2{margin:0 0 46px}
+.pt-group+.pt-group{margin-top:46px}
+.pt-h{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:18px}
+html[lang=ar] .pt-h{letter-spacing:0;font-size:15px}
+.pt-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.pt-logos+.pt-logos{margin-top:16px}
+.pt-logo{flex:0 1 200px;height:108px;display:grid;place-items:center;padding:20px 26px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.025);transition:border-color .25s,background .25s}
+.pt-logo.lg{flex-basis:360px;height:156px}
+/* logos show in white; a colour logo file shows its own colours on hover */
+.pt-logo img{display:block;max-width:100%;max-height:42px;width:auto;height:auto;filter:grayscale(1) brightness(0) invert(1);opacity:.82;transition:filter .25s,opacity .25s}
+.pt-logo.lg img{max-height:70px}
+.pt-logo .pt-name{font-size:22px;font-weight:700;color:var(--lav);letter-spacing:.02em;opacity:.85}
+.pt-logo:hover{border-color:rgba(155,107,255,.55);background:rgba(123,63,255,.08)}
+.pt-logo:hover img{filter:none;opacity:1}
+/* phones: keep the longer "Join the challenge" nav button inside the screen */
+@media(max-width:480px){
+  nav .wrap{padding:0 16px;gap:10px}
+  .nav-right{gap:8px}
+  .nav-cta{text-transform:none;letter-spacing:0;font-size:12.5px;padding:9px 13px}
+}
+@media(max-width:374px){
+  nav .lockup .word{font-size:14px}
+  nav .lockup{gap:6px}
+  .nav-cta{font-size:12px;padding:8px 10px}
+}
+@media(max-width:600px){.pt-logo{flex-basis:calc(50% - 8px);height:92px;padding:16px}.pt-logo.lg{flex-basis:100%;height:128px}.pt-logo img{max-height:34px}.pt-logo.lg img{max-height:58px}}
+@media(max-width:760px){.prizes{padding-bottom:56px}#journey{padding-top:56px}.partners{padding:80px 0 90px}.intro{padding:100px 0 24px}}
 </style>
 </head>
 <body>
@@ -505,17 +564,18 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
     <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#C6A6FF"/><stop offset=".5" stop-color="#9560FF"/><stop offset="1" stop-color="#6A2EF2"/>
     </linearGradient>
+    <symbol id="sar" viewBox="0 0 1124.14 1256.39"><path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/><path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/></symbol>
     <symbol id="mark" viewBox="0 0 146.1 165.6"><path d="M66.3 97.1 65.0 99.9 64.4 103.8 64.5 157.2 64.8 159.5 65.5 161.5 66.7 163.1 68.2 164.4 70.0 165.2 71.6 165.5 73.5 165.4 75.1 164.9 87.4 157.1 91.8 153.7 93.4 151.6 94.2 149.5 94.5 137.9 95.7 135.9 97.9 134.6 99.6 134.6 101.4 135.2 125.2 147.9 130.9 150.4 133.8 150.6 135.9 150.0 138.6 148.3 140.7 146.0 141.7 144.0 142.2 142.0 143.6 130.0 143.6 128.0 143.1 126.4 142.4 125.3 141.1 124.1 122.8 115.5 91.4 99.5 78.0 93.8 74.9 93.1 71.2 93.5 68.8 94.7ZM143.8 42.4 141.9 40.9 139.9 40.0 137.6 39.8 135.1 40.5 117.2 50.8 103.1 59.5 100.2 61.7 98.6 63.9 97.0 69.5 97.1 70.5 98.6 74.4 98.4 77.9 97.6 79.6 96.4 81.1 94.2 82.7 90.6 84.7 89.2 86.4 88.6 88.1 88.5 90.2 89.0 91.9 89.9 93.1 91.1 94.1 92.5 94.6 94.5 94.5 96.1 94.0 141.6 69.9 143.2 68.7 144.6 66.9 145.4 64.8 145.9 57.6 145.9 46.2 145.1 44.1ZM13.4 37.0 10.6 37.3 7.5 38.8 5.2 40.9 3.5 43.6 2.9 45.9 1.4 57.6 1.5 60.0 2.0 61.9 3.1 63.6 5.0 65.2 30.4 79.6 31.7 80.9 32.2 82.5 31.8 83.8 30.4 85.2 4.0 102.3 2.1 103.9 0.8 105.9 0.0 109.4 0.0 124.1 0.4 126.6 1.5 128.9 3.4 130.6 5.4 131.7 8.0 132.2 11.4 131.6 15.2 129.2 36.1 114.2 56.9 98.9 62.4 94.4 69.8 89.3 72.2 87.1 74.0 84.9 75.2 82.1 75.6 79.5 75.2 76.1 74.1 73.4 72.4 71.4 69.2 69.1 38.0 50.0 16.4 37.7ZM69.6 0.2 67.5 1.2 65.5 2.9 64.1 5.1 63.6 7.2 63.6 39.1 63.8 46.8 64.3 49.4 65.1 51.1 66.4 52.9 69.4 55.2 78.2 60.4 88.5 65.4 90.5 65.6 93.3 63.6 94.2 61.5 95.0 32.1 95.0 16.5 94.6 14.5 93.2 11.8 90.2 9.4 74.5 0.6 72.5 0.0Z" fill="url(#lg)"/></symbol>
   </defs>
 </svg>
 
-<div id="loader" aria-hidden="true"><div class="lw"><svg viewBox="0 0 146.1 165.6"><path class="lp lp1" d="M69.6 0.2 67.5 1.2 65.5 2.9 64.1 5.1 63.6 7.2 63.6 39.1 63.8 46.8 64.3 49.4 65.1 51.1 66.4 52.9 69.4 55.2 78.2 60.4 88.5 65.4 90.5 65.6 93.3 63.6 94.2 61.5 95.0 32.1 95.0 16.5 94.6 14.5 93.2 11.8 90.2 9.4 74.5 0.6 72.5 0.0ZM143.8 42.4 141.9 40.9 139.9 40.0 137.6 39.8 135.1 40.5 117.2 50.8 103.1 59.5 100.2 61.7 98.6 63.9 97.0 69.5 97.1 70.5 98.6 74.4 98.4 77.9 97.6 79.6 96.4 81.1 94.2 82.7 90.6 84.7 89.2 86.4 88.6 88.1 88.5 90.2 89.0 91.9 89.9 93.1 91.1 94.1 92.5 94.6 94.5 94.5 96.1 94.0 141.6 69.9 143.2 68.7 144.6 66.9 145.4 64.8 145.9 57.6 145.9 46.2 145.1 44.1Z" fill="url(#lg)"/><path class="lp lp2" d="M66.3 97.1 65.0 99.9 64.4 103.8 64.5 157.2 64.8 159.5 65.5 161.5 66.7 163.1 68.2 164.4 70.0 165.2 71.6 165.5 73.5 165.4 75.1 164.9 87.4 157.1 91.8 153.7 93.4 151.6 94.2 149.5 94.5 137.9 95.7 135.9 97.9 134.6 99.6 134.6 101.4 135.2 125.2 147.9 130.9 150.4 133.8 150.6 135.9 150.0 138.6 148.3 140.7 146.0 141.7 144.0 142.2 142.0 143.6 130.0 143.6 128.0 143.1 126.4 142.4 125.3 141.1 124.1 122.8 115.5 91.4 99.5 78.0 93.8 74.9 93.1 71.2 93.5 68.8 94.7Z" fill="url(#lg)"/><path class="lp lp3" d="M13.4 37.0 10.6 37.3 7.5 38.8 5.2 40.9 3.5 43.6 2.9 45.9 1.4 57.6 1.5 60.0 2.0 61.9 3.1 63.6 5.0 65.2 30.4 79.6 31.7 80.9 32.2 82.5 31.8 83.8 30.4 85.2 4.0 102.3 2.1 103.9 0.8 105.9 0.0 109.4 0.0 124.1 0.4 126.6 1.5 128.9 3.4 130.6 5.4 131.7 8.0 132.2 11.4 131.6 15.2 129.2 36.1 114.2 56.9 98.9 62.4 94.4 69.8 89.3 72.2 87.1 74.0 84.9 75.2 82.1 75.6 79.5 75.2 76.1 74.1 73.4 72.4 71.4 69.2 69.1 38.0 50.0 16.4 37.7Z" fill="url(#lg)"/></svg><div class="lt">AGENTHON</div><div class="ll"><span>CREATOR</span><span>MARKETING</span><span>SHOPPING</span></div></div></div>
+<div id="loader" aria-hidden="true"><div class="lw"><svg viewBox="0 0 146.1 165.6"><path class="lp lp1" d="M69.6 0.2 67.5 1.2 65.5 2.9 64.1 5.1 63.6 7.2 63.6 39.1 63.8 46.8 64.3 49.4 65.1 51.1 66.4 52.9 69.4 55.2 78.2 60.4 88.5 65.4 90.5 65.6 93.3 63.6 94.2 61.5 95.0 32.1 95.0 16.5 94.6 14.5 93.2 11.8 90.2 9.4 74.5 0.6 72.5 0.0ZM143.8 42.4 141.9 40.9 139.9 40.0 137.6 39.8 135.1 40.5 117.2 50.8 103.1 59.5 100.2 61.7 98.6 63.9 97.0 69.5 97.1 70.5 98.6 74.4 98.4 77.9 97.6 79.6 96.4 81.1 94.2 82.7 90.6 84.7 89.2 86.4 88.6 88.1 88.5 90.2 89.0 91.9 89.9 93.1 91.1 94.1 92.5 94.6 94.5 94.5 96.1 94.0 141.6 69.9 143.2 68.7 144.6 66.9 145.4 64.8 145.9 57.6 145.9 46.2 145.1 44.1Z" fill="url(#lg)"/><path class="lp lp2" d="M66.3 97.1 65.0 99.9 64.4 103.8 64.5 157.2 64.8 159.5 65.5 161.5 66.7 163.1 68.2 164.4 70.0 165.2 71.6 165.5 73.5 165.4 75.1 164.9 87.4 157.1 91.8 153.7 93.4 151.6 94.2 149.5 94.5 137.9 95.7 135.9 97.9 134.6 99.6 134.6 101.4 135.2 125.2 147.9 130.9 150.4 133.8 150.6 135.9 150.0 138.6 148.3 140.7 146.0 141.7 144.0 142.2 142.0 143.6 130.0 143.6 128.0 143.1 126.4 142.4 125.3 141.1 124.1 122.8 115.5 91.4 99.5 78.0 93.8 74.9 93.1 71.2 93.5 68.8 94.7Z" fill="url(#lg)"/><path class="lp lp3" d="M13.4 37.0 10.6 37.3 7.5 38.8 5.2 40.9 3.5 43.6 2.9 45.9 1.4 57.6 1.5 60.0 2.0 61.9 3.1 63.6 5.0 65.2 30.4 79.6 31.7 80.9 32.2 82.5 31.8 83.8 30.4 85.2 4.0 102.3 2.1 103.9 0.8 105.9 0.0 109.4 0.0 124.1 0.4 126.6 1.5 128.9 3.4 130.6 5.4 131.7 8.0 132.2 11.4 131.6 15.2 129.2 36.1 114.2 56.9 98.9 62.4 94.4 69.8 89.3 72.2 87.1 74.0 84.9 75.2 82.1 75.6 79.5 75.2 76.1 74.1 73.4 72.4 71.4 69.2 69.1 38.0 50.0 16.4 37.7Z" fill="url(#lg)"/></svg><div class="lt">AGENTHON</div><div class="ll"><span>SHOPPING</span><span>CREATOR</span><span>MARKETING</span></div></div></div>
 <a href="#register" class="mcta btn btn-teal" id="mcta" data-t="register"></a>
 <nav id="nav">
   <div class="wrap">
     <a class="lockup" href="#top" aria-label="AGENTHON"><svg class="mark"><use href="#mark"/></svg><span class="word">AGENTHON</span></a>
     <div class="nav-links">
-      <a href="#who" data-t="navAbout"></a><a href="#challenge" data-t="nav1"></a><a href="#tracks" data-t="nav2"></a><a href="#prizes" data-t="nav4"></a><a href="#journey" data-t="nav3"></a><a href="#team" data-t="navTeam"></a><a href="#faq" data-t="nav5"></a>
+      <a href="#challenge" data-t="nav1"></a><a href="#prizes" data-t="nav4"></a><a href="#faq" data-t="nav5"></a>
     </div>
     <div class="nav-right">
       <button class="lang" id="lang" type="button">EN</button>
@@ -563,7 +623,6 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
     <div class="hero-main">
       <h1 class="tagline" data-t="h1"></h1>
       <p class="lead" data-t="hsub"></p>
-      <p class="lead2" data-t="hlead"></p>
       <div class="hero-ctas">
         <a href="#register" class="btn btn-teal"><span data-t="register"></span></a>
         <a href="#tracks" class="btn btn-ghost" data-t="explore"></a>
@@ -575,7 +634,7 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
           <div class="cd"><b id="cd-m">00</b><span data-t="cdM"></span></div>
           <div class="cd"><b id="cd-s">00</b><span data-t="cdS"></span></div>
         </div>
-        <div class="cd-note"><b data-t="dates"></b><span data-t="kick"></span></div>
+        <div class="cd-note"><b data-t="dates"></b></div>
       </div>
     </div>
   </div>
@@ -593,25 +652,15 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
 
 <div class="marquee" aria-hidden="true"><div class="marquee-track" id="mq"></div></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<section class="intro" id="about">
+  <div class="wrap">
+    <p class="manifesto" id="manifesto" data-t="inM"></p>
+  </div>
+</section>
 <section class="callout" id="who">
   <div class="wrap">
     <div class="co-card rv">
       <div class="co-glow"></div>
-      <span class="eyebrow" data-t="coE"></span>
       <h2 class="co-h" data-t="coH"></h2>
       <p class="co-p" data-t="coP"></p>
       <div class="co-badges">
@@ -624,21 +673,9 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
     </div>
   </div>
 </section>
-<section class="intro" id="about">
-  <div class="wrap">
-    <span class="eyebrow rv" data-t="inE"></span>
-    <p class="manifesto" id="manifesto" data-t="inM"></p>
-    <div class="proof">
-      <div class="rv d1"><span class="pn latin">01</span><h4 data-t="in1h"></h4><p data-t="in1p"></p></div>
-      <div class="rv d2"><span class="pn latin">02</span><h4 data-t="in2h"></h4><p data-t="in2p"></p></div>
-      <div class="rv d3"><span class="pn latin">03</span><h4 data-t="in3h"></h4><p data-t="in3p"></p></div>
-    </div>
-  </div>
-</section>
 <section class="challenge" id="challenge">
   <div class="wrap grid">
     <div>
-      <span class="eyebrow rv" data-t="chE"></span><br><span class="chk rv" data-t="chK"></span>
       <h2 class="rv d1" data-t="chH"></h2>
       <p class="lead rv d2" data-t="chL"></p>
     </div>
@@ -649,6 +686,7 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
         <div class="rv d4"><span class="n">03</span><div><b data-t="r3b"></b><small data-t="r3s"></small></div></div>
       </div>
     </div>
+  </div>
 </section>
 <section class="pillars" id="tracks">
   <div class="pin">
@@ -669,49 +707,34 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
       </div>
       <div class="pinfo">
         <div class="pstep pintro" data-step="0">
-          <span class="eyebrow" data-t="trE"></span>
           <h2 data-t="trH"></h2>
           <p class="lead" data-t="trL"></p>
           <div class="scrollhint"><i></i><span data-t="scrollHint"></span></div>
         </div>
         <article class="pstep pcard" data-step="1">
-          <div class="pc-top"><span class="pc-num">01</span><span class="pc-st" data-t="st1"></span></div>
-          <h3 data-t="t1h"></h3><div class="pc-latin">Creator Agents</div>
-          <dl class="pc-grid">
-            <div><dt data-t="lWho"></dt><dd data-t="t1f"></dd></div>
-            <div><dt data-t="lFocus"></dt><dd data-t="t1s"></dd></div>
-            <div><dt data-t="lMission"></dt><dd data-t="t1m"></dd></div>
-            <div><dt data-t="lChal"></dt><dd data-t="t1c"></dd></div>
-          </dl>
-          <div class="pc-q"><span data-t="lOpen"></span><p data-t="t1q"></p></div>
-          <a class="tpick" href="#register" data-track="creator"><span data-t="pick"></span><svg class="flip" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <div class="pc-top"><span class="pc-st" data-t="st1"></span><span class="pc-num">01</span></div>
+          <h3 data-t="t1h"></h3><div class="pc-latin">Shopping Agents</div>
+          <p class="pc-p" data-t="t1p"></p>
+          <div class="pc-q"><p data-t="t1q"></p></div>
+          <a class="tpick" href="#register" data-track="shopping"><span data-t="pick"></span><svg class="flip" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </article>
 
         <article class="pstep pcard" data-step="2">
-          <div class="pc-top"><span class="pc-num">02</span><span class="pc-st" data-t="st2"></span></div>
-          <h3 data-t="t2h"></h3><div class="pc-latin">Brand Marketing Agents</div>
-          <dl class="pc-grid">
-            <div><dt data-t="lWho"></dt><dd data-t="t2f"></dd></div>
-            <div><dt data-t="lFocus"></dt><dd data-t="t2s"></dd></div>
-            <div><dt data-t="lMission"></dt><dd data-t="t2m"></dd></div>
-            <div><dt data-t="lChal"></dt><dd data-t="t2c"></dd></div>
-          </dl>
-          <div class="pc-q"><span data-t="lOpen"></span><p data-t="t2q"></p></div>
-          <a class="tpick" href="#register" data-track="brand"><span data-t="pick"></span><svg class="flip" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <div class="pc-top"><span class="pc-st" data-t="st2"></span><span class="pc-num">02</span></div>
+          <h3 data-t="t2h"></h3><div class="pc-latin">Creator Agents</div>
+          <p class="pc-p" data-t="t2p"></p>
+          <div class="pc-q"><p data-t="t2q"></p></div>
+          <a class="tpick" href="#register" data-track="creator"><span data-t="pick"></span><svg class="flip" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </article>
 
         <article class="pstep pcard" data-step="3">
-          <div class="pc-top"><span class="pc-num">03</span><span class="pc-st" data-t="st3"></span></div>
-          <h3 data-t="t3h"></h3><div class="pc-latin">Shopping Agents</div>
-          <dl class="pc-grid">
-            <div><dt data-t="lWho"></dt><dd data-t="t3f"></dd></div>
-            <div><dt data-t="lFocus"></dt><dd data-t="t3s"></dd></div>
-            <div><dt data-t="lMission"></dt><dd data-t="t3m"></dd></div>
-            <div><dt data-t="lChal"></dt><dd data-t="t3c"></dd></div>
-          </dl>
-          <div class="pc-q"><span data-t="lOpen"></span><p data-t="t3q"></p></div>
-          <a class="tpick" href="#register" data-track="shopping"><span data-t="pick"></span><svg class="flip" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <div class="pc-top"><span class="pc-st" data-t="st3"></span><span class="pc-num">03</span></div>
+          <h3 data-t="t3h"></h3><div class="pc-latin">Brand Marketing Agents</div>
+          <p class="pc-p" data-t="t3p"></p>
+          <div class="pc-q"><p data-t="t3q"></p></div>
+          <a class="tpick" href="#register" data-track="brand"><span data-t="pick"></span><svg class="flip" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </article>
+
 
       </div>
     </div>
@@ -725,74 +748,25 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
   <div class="wrap">
     <div class="pool">
       <span class="eyebrow rv" data-t="pE"></span>
-      <div class="big rv d1"><span class="count" data-to="16000">0</span><small data-t="sar"></small></div>
+      <div class="big rv d1"><svg class="sar" role="img" data-tl="sarL"><use href="#sar"/></svg><span class="count" data-to="16000">0</span></div>
     </div>
     <div class="podium">
-      <div class="pod p2 rv d2"><div class="rk" data-t="p2"></div><div class="amt"><span class="count" data-to="5000">0</span><span class="cur" data-t="sar"></span></div></div>
-      <div class="pod p1 rv d1"><div class="rk" data-t="p1"></div><div class="amt"><span class="count" data-to="10000">0</span><span class="cur" data-t="sar"></span></div></div>
-      <div class="pod p3 rv d3"><div class="rk" data-t="p3"></div><div class="amt"><span class="count" data-to="1000">0</span><span class="cur" data-t="sar"></span></div></div>
+      <div class="pod p2 rv d2"><div class="rk" data-t="p2"></div><div class="amt"><svg class="sar" role="img" data-tl="sarL"><use href="#sar"/></svg><span class="count" data-to="5000">0</span></div></div>
+      <div class="pod p1 rv d1"><div class="rk" data-t="p1"></div><div class="amt"><svg class="sar" role="img" data-tl="sarL"><use href="#sar"/></svg><span class="count" data-to="10000">0</span></div></div>
+      <div class="pod p3 rv d3"><div class="rk" data-t="p3"></div><div class="amt"><svg class="sar" role="img" data-tl="sarL"><use href="#sar"/></svg><span class="count" data-to="1000">0</span></div></div>
     </div>
-    <p class="fine" data-t="pFine"></p>
     <div style="text-align:center;margin-top:30px"><a href="#register" class="btn btn-teal" data-t="register"></a></div>
   </div>
 </section>
 <section id="journey">
   <div class="wrap">
-    <span class="eyebrow rv" data-t="jE"></span>
     <h2 class="rv d1" data-t="jH"></h2>
-    <p class="lead rv d2" data-t="jL"></p>
     <div class="journey-row" id="jr">
       <div class="prog"></div>
-      <div class="step"><div class="node"><svg viewBox="0 0 36 36" fill="none" stroke="#9B6BFF" stroke-width="2.4" stroke-linecap="round"><circle cx="18" cy="8" r="4" fill="#9B6BFF"/><circle cx="8" cy="28" r="4" fill="#9B6BFF"/><circle cx="28" cy="28" r="4" fill="#9B6BFF"/><path d="M18 12v7M18 19l-8 6M18 19l8 6"/></svg></div><div><div class="date" data-t="d1"></div><h4 data-t="s1h"></h4><p data-t="s1p"></p><span class="tag" data-t="remoteEve"></span></div></div>
-      <div class="step"><div class="node"><svg viewBox="0 0 36 36"><path d="M6 8l12 10-12 10z" fill="#9B6BFF" stroke="#9B6BFF" stroke-width="2" stroke-linejoin="round"/><path d="M18 8l12 10-12 10z" fill="#7B3FFF" stroke="#7B3FFF" stroke-width="2" stroke-linejoin="round"/></svg></div><div><div class="date" data-t="d2"></div><h4 data-t="s2h"></h4><p data-t="s2p"></p><span class="tag" data-t="remoteEve"></span></div></div>
-      <div class="step"><div class="node"><svg><use href="#mark"/></svg></div><div><div class="date" data-t="d3"></div><h4 data-t="s3h"></h4><p data-t="s3p"></p><span class="tag live" data-t="inperson"></span></div></div>
+      <div class="step"><div class="node"><svg viewBox="0 0 36 36" fill="none" stroke="#9B6BFF" stroke-width="2.4" stroke-linecap="round"><circle cx="18" cy="8" r="4" fill="#9B6BFF"/><circle cx="8" cy="28" r="4" fill="#9B6BFF"/><circle cx="28" cy="28" r="4" fill="#9B6BFF"/><path d="M18 12v7M18 19l-8 6M18 19l8 6"/></svg></div><div><div class="date" data-t="d1"></div><h4 data-t="s1h"></h4><p data-t="s1p"></p></div></div>
+      <div class="step"><div class="node"><svg viewBox="0 0 36 36"><path d="M6 8l12 10-12 10z" fill="#9B6BFF" stroke="#9B6BFF" stroke-width="2" stroke-linejoin="round"/><path d="M18 8l12 10-12 10z" fill="#7B3FFF" stroke="#7B3FFF" stroke-width="2" stroke-linejoin="round"/></svg></div><div><div class="date" data-t="d2"></div><h4 data-t="s2h"></h4><p data-t="s2p"></p></div></div>
+      <div class="step"><div class="node"><svg><use href="#mark"/></svg></div><div><div class="date" data-t="d3"></div><h4 data-t="s3h"></h4><p data-t="s3p"></p></div></div>
     </div>
-  </div>
-</section>
-<section class="team" id="team">
-  <div class="wrap">
-    <div class="team-head">
-      <div>
-        <span class="eyebrow rv" data-t="tmE"></span>
-        <h2 class="rv d1" data-t="tmH"></h2>
-        <p class="lead rv d2" data-t="tmL"></p>
-      </div>
-      <div class="tstats rv d2">
-        <div><b class="latin" dir="ltr">2–5</b><span data-t="ts1"></span></div>
-        <div><b class="latin">1</b><span data-t="ts2"></span></div>
-        <div><b class="latin">1</b><span data-t="ts3"></span></div>
-      </div>
-    </div>
-
-    
-
-    <div class="howgrid">
-      <div class="how rv">
-        <h3 class="subh" data-t="howH"></h3>
-        <ol>
-          <li><b>1</b><span data-t="h1s"></span></li>
-          <li><b>2</b><span data-t="h2s"></span></li>
-          <li><b>3</b><span data-t="h4s"></span></li>
-          <li><b>4</b><span data-t="h5s"></span></li>
-        </ol>
-      </div>
-      <div class="solo rv d2">
-        <svg class="solomark"><use href="#mark"/></svg>
-        <h3 data-t="soloH"></h3>
-        <p data-t="soloP"></p>
-        <a href="#register" class="btn btn-teal" id="solobtn" data-t="soloBtn"></a>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="faq">
-  <div class="wrap faq-grid">
-    <div>
-      <span class="eyebrow rv" data-t="fE"></span>
-      <h2 class="rv d1" data-t="fH"></h2>
-      <p class="lead rv d2" data-t="fL"></p>
-    </div>
-    <div class="rv d2"><div class="faqcats" id="faqcats"></div><div id="faqlist"></div></div>
   </div>
 </section>
 
@@ -800,15 +774,8 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
   <div class="wrap">
     <div class="reg-card rv">
       <div class="reg-side">
-        <span class="eyebrow" data-t="gE"></span>
         <h2 data-t="gH"></h2>
         <p style="color:var(--lav)" data-t="gL"></p>
-        <ul>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="#22C5C3" stroke-width="2.4"><path d="M4 10l4 4 8-8"/></svg><span data-t="g1"></span></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="#22C5C3" stroke-width="2.4"><path d="M4 10l4 4 8-8"/></svg><span data-t="g2"></span></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="#22C5C3" stroke-width="2.4"><path d="M4 10l4 4 8-8"/></svg><span data-t="g3"></span></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="#22C5C3" stroke-width="2.4"><path d="M4 10l4 4 8-8"/></svg><span data-t="g4"></span></li>
-        </ul>
         <svg class="bg" style="height:340px"><use href="#mark"/></svg>
       </div>
       <form id="form" novalidate>
@@ -819,35 +786,73 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
           </div>
         </div>
         <div class="row2">
-          <label class="f"><span data-t="fName"></span><input type="text" name="name" required autocomplete="name"></label>
-          <label class="f"><span data-t="fEmail"></span><input type="email" name="email" required autocomplete="email" dir="ltr"></label>
+          <label class="f"><span data-t="fName"></span><input type="text" name="name" required autocomplete="name"><small class="fe"></small></label>
+          <label class="f"><span data-t="fEmail"></span><input type="email" name="email" required autocomplete="email" dir="ltr"><small class="fe"></small></label>
         </div>
         <div class="row2">
-          <label class="f teamonly" style="grid-column:1/-1"><span data-t="fTeamName"></span><input type="text" name="teamname" required></label>
+          <label class="f"><span data-t="fPhone"></span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" dir="ltr" placeholder="05xxxxxxxx"><small class="fe"></small></label>
+          <div class="cvf"><span id="cvlbl" data-t="fCv"></span>
+            <label class="drop" id="drop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4M7 9l5-5 5 5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg><span class="dz-t" id="cvname"></span><input type="file" name="cv" accept="application/pdf,.pdf" required aria-labelledby="cvlbl"></label>
+            <small class="hint" data-t="cvHint"></small><small class="fe"></small>
+          </div>
         </div>
+        <label class="f teamonly"><span data-t="fTeamName"></span><input type="text" name="teamname" required><small class="fe"></small></label>
         <div class="teamonly members">
           <div class="mhead"><span data-t="fMembers"></span><small id="mcount"></small></div>
           <div id="mlist"></div>
           <button type="button" class="addm" id="addm"><span>+</span> <span data-t="addMember"></span></button>
+          <small class="fe" id="mfe"></small>
         </div>
         <div class="solonote" data-t="soloNote"></div>
         <div class="fl"><span data-t="fTrack"></span>
           <div class="opts">
-            <label class="opt"><input type="radio" name="track" value="creator" required><span data-t="t1h"></span></label>
-            <label class="opt"><input type="radio" name="track" value="brand"><span data-t="t2h"></span></label>
-            <label class="opt"><input type="radio" name="track" value="shopping"><span data-t="t3h"></span></label>
+            <label class="opt"><input type="radio" name="track" value="shopping" required><span data-t="t1h"></span></label>
+            <label class="opt"><input type="radio" name="track" value="creator"><span data-t="t2h"></span></label>
+            <label class="opt"><input type="radio" name="track" value="brand"><span data-t="t3h"></span></label>
           </div>
+          <small class="fe"></small>
         </div>
-        <label class="f"><span data-t="fWhat"></span><textarea name="what" required></textarea></label>
-        <label class="f"><span data-t="fWho"></span><textarea name="who" required></textarea></label>
-        <label class="f"><span data-t="fWhy"></span><textarea name="why" required></textarea></label>
-        
+        <label class="f"><span data-t="fIdea"></span><textarea name="idea" required></textarea><small class="fe"></small></label>
+        <label class="f"><span data-t="fWhy"></span><textarea name="why" required></textarea><small class="fe"></small></label>
+
         <div class="ok" id="ok" role="status"></div>
         <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
           <span class="form-note" data-t="fNote"></span>
           <button class="btn btn-teal" type="submit" data-t="submit"></button>
         </div>
       </form>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <h2 class="rv d1" data-t="fH"></h2>
+      <p class="lead rv d2" data-t="fL"></p>
+    </div>
+    <div class="rv d2"><div id="faqlist"></div></div>
+  </div>
+</section>
+
+<section class="partners" id="partners">
+  <div class="wrap">
+    <h2 class="rv" data-t="ptH"></h2>
+    <div class="pt-group rv d1">
+      <h3 class="pt-h" data-t="ptOrg"></h3>
+      <div class="pt-logos">
+        <div class="pt-logo"><img src="assets/itcan.svg" alt="ITCAN" width="1725" height="483" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="pt-group rv d2">
+      <h3 class="pt-h" data-t="ptSpon"></h3>
+      <div class="pt-logos">
+        <div class="pt-logo lg"><img src="assets/sahseh.svg" alt="Sahseh" width="176" height="60" loading="lazy"></div>
+      </div>
+      <div class="pt-logos">
+        <div class="pt-logo"><span class="pt-name latin">DTV</span></div>
+        <div class="pt-logo"><span class="pt-name" data-t="ptKath"></span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -876,131 +881,70 @@ html[lang=ar] .powered>span{letter-spacing:0;font-size:14px}
 const T={
  ar:{
   nav1:"التحدي",
-  nav2:"المسارات",
-  nav3:"الجدول",
   nav4:"الجوائز",
   nav5:"الأسئلة",
-  register:"سجّل الآن",
+  register:"انضم للتحدي",
   explore:"استكشف المسارات",
-  h1:"فكرتك…<br>ووكيلٌ ينفّذها.",
+  h1:"من فكرة…<br>إلى إنجاز.",
   hsub:"هاكاثون وكلاء الذكاء الاصطناعي في المنطقة الشرقية.",
-  hlead:"يومان من التدريب، ويوم عرض واحد يُثبت فيه وكيلك ما يستطيع إنجازه.",
   cdD:"يوم",
   cdH:"ساعة",
   cdM:"دقيقة",
   cdS:"ثانية",
   dates:"من 4 إلى 6 يناير 2027",
-  kick:"التدريب يبدأ 4 يناير · يوم العرض 6 يناير",
   marquee:["مشاركة مجانية","جوائز بقيمة 16,000 ريال","من 4 إلى 6 يناير 2027","المنطقة الشرقية","من 21 إلى 35 سنة","مرشدون وأدوات","شهادات مشاركة","ثلاثة مسارات"],
-  chE:"التحدي",
-  chH:"اصنع وكيلًا ذكيًا <em>يُنجز، لا يكتفي بالكلام.</em>",
-  chL:"ابتكر وكيل ذكاء اصطناعي يستخدم الأدوات، ويتخذ القرارات، وينفّذ إجراءات لإنجاز مهمة حقيقية. روبوتات المحادثة وحدها لا تكفي.",
-  r1b:"من سيستفيد منه؟",
-  r1s:"أرِنا المستخدم الذي صُمّم الوكيل لخدمته.",
-  r2b:"كيف يعمل؟",
-  r2s:"الأدوات والقرارات والإجراءات التي ينفّذها.",
-  r3b:"ماذا ينجز فعليًا؟",
-  r3s:"تجربة عملية تثبت قدراته أمام الجميع يوم العرض.",
-  trE:"المسارات",
-  trH:"ثلاثة مسارات.<br><em>علامة واحدة.</em>",
-  trL:"شعار إيجنتثون مكوّن من ثلاثة أجزاء، وكل جزء منها يمثّل مسارًا من مسارات الهاكاثون. مرّر للأسفل لتنتقل من مسار إلى آخر.",
+  chH:"الذكاء الاصطناعي في كل مكان… <em>والتحدي أن يخدمنا نحن.</em>",
+  chL:"أغلب أدوات الذكاء الاصطناعي اليوم صُمّمت للعالم كله، لكنها لا تفهمنا دائمًا. التحدي أن تبتكر وكيلًا ذكيًا يعرف لغتنا وثقافتنا، ويخدم مجتمعنا فعلًا.",
+  r1b:"يفهمنا",
+  r1s:"يتحدث لغتنا ولهجتنا، ويعرف ثقافتنا وطريقة حياتنا.",
+  r2b:"يخدمنا",
+  r2s:"يحلّ مشكلة حقيقية يواجهها الناس هنا.",
+  r3b:"يُنجز",
+  r3s:"ينفّذ المهمة من البداية إلى النهاية.",
+  trH:"ثلاثة مسارات.<br><em>وين بتصنع الفرق؟</em>",
+  trL:"التسوّق، صنّاع المحتوى، والتسويق… اختر المجال الذي يلهمك، وابتكر وكيلًا يصنع فيه فرقًا.",
   scrollHint:"مرّر للاستكشاف",
-  st1:"المحطة",
-  st2:"المحطة",
-  st3:"المحطة",
-  t1h:"وكلاء صنّاع المحتوى",
-  t1q:"كيف يمكن لوكيل ذكي أن يسهّل عمل صنّاع المحتوى ويمنحهم مساحة أكبر للإبداع؟",
-  t1f:"صنّاع المحتوى.",
-  t1s:"إنشاء المحتوى، وإدارة الشراكات، وتنمية الجمهور، وزيادة الدخل، وتسهيل المهام اليومية لصنّاع المحتوى.",
-  t1m:"ابتكر وكيلًا ذكيًا يستخدم الأدوات وينفّذ إجراءات فعلية لحل مشكلة أو إنجاز مهمة، لا مجرد تقديم الإجابات.",
-  t1c:"كيف يمكن للوكلاء تولّي المهام المتكررة ومنح صنّاع المحتوى وقتًا أكبر للإبداع؟",
-  t2h:"وكلاء التسويق",
-  t2q:"كيف يمكن للوكلاء مساعدة الأنشطة التجارية على تحقيق نمو أكبر من خلال التعاون مع صنّاع المحتوى؟",
-  t2f:"الأنشطة التجارية وفرق التسويق التي تتعاون مع صنّاع المحتوى.",
-  t2s:"اكتشاف صنّاع المحتوى المناسبين، وإدارة التعاون معهم، وقياس الأداء، وتحسين نتائج الحملات التسويقية.",
-  t2m:"ابتكر وكيلًا ذكيًا يستخدم الأدوات وينفّذ إجراءات فعلية لحل تحدٍ تسويقي أو تحسين عملية قائمة.",
-  t2c:"كيف يمكن للوكلاء تحويل التعاون مع صنّاع المحتوى إلى فرص نمو ونتائج تسويقية أفضل؟",
-  t3h:"وكلاء التسوّق",
-  t3q:"كيف يمكن للوكلاء جعل رحلة التسوّق أكثر سهولة وذكاءً، من اكتشاف المنتجات إلى اتخاذ قرار الشراء؟",
-  t3f:"المتسوّقون عبر الإنترنت.",
-  t3s:"اكتشاف المنتجات، ومقارنة الخيارات، والعثور على أفضل العروض، وتعزيز الثقة وتسهيل تجربة الشراء.",
-  t3m:"ابتكر وكيلًا ذكيًا يستخدم الأدوات وينفّذ إجراءات فعلية لتسهيل رحلة التسوّق وحل تحدياتها.",
-  t3c:"كيف يمكن للوكلاء جعل التسوّق أكثر سهولة وذكاءً، من اكتشاف المنتج حتى إتمام الشراء؟",
-  lWho:"لمن؟",
-  lFocus:"مجال التركيز",
-  lMission:"مهمتك",
-  lChal:"التحدي",
-  lOpen:"السؤال المفتوح",
+  st1:"مسار",
+  st2:"مسار",
+  st3:"مسار",
+  t1h:"وكلاء التسوّق",
+  t1q:"كيف يمكن لوكيل ذكي أن يجعل التسوّق أسهل وأذكى؟",
+  t2h:"وكلاء صنّاع المحتوى",
+  t2q:"كيف يمكن لوكيل ذكي أن يجعل رحلة صانع المحتوى أسهل وأكثر إبداعًا؟",
+  t3h:"وكلاء التسويق",
+  t3q:"كيف يمكن لوكيل ذكي أن يساعد العلامات التجارية على التسويق والنمو بشكل أذكى؟",
   pick:"اختر هذا المسار",
-  jE:"الجدول",
   jH:"ثلاثة أيام. <em>من الفكرة إلى وكيل يعمل.</em>",
-  jL:"أمسيتان تدريبيتان عن بُعد (من 6:00 إلى 9:00 مساءً) لتصميم وكيلك وتطويره، ثم يوم عرض حضوري في المنطقة الشرقية.",
   d1:"4 يناير",
   d2:"5 يناير",
   d3:"6 يناير",
-  s1h:"التدريب ١: صمّم وكيلك",
-  s1p:"الانطلاق، والتعرّف على المسارات والمرشدين، وتحديد المستخدم والمهمة والأدوات.",
-  s2h:"التدريب ٢: طوّر وشغّل",
-  s2p:"اربط الأدوات، واجعل وكيلك ينفّذ، وجهّز عرضك.",
+  s1h:"الانطلاق",
+  s1p:"جلسات مع خبراء وتوجيه لتصميم فكرتك.",
+  s2h:"البناء",
+  s2p:"طوّر وكيلك واجعله ينفّذ، بدعم من المرشدين.",
   s3h:"يوم العرض",
-  s3p:"عروض حيّة أمام لجنة التحكيم، ثم إعلان الفائزين وتتويجهم.",
-  inperson:"حضوري",
-  pE:"مجموع الجوائز",
-  sar:"ريال",
+  s3p:"اعرض وكيلك أمام لجنة التحكيم، وتُعلن النتائج.",
+  pE:"جوائز بقيمة",
   p1:"المركز الأول",
   p2:"المركز الثاني",
   p3:"المركز الثالث",
-  pFine:"مبالغ الجوائز مقترحة وتخضع للاعتماد النهائي.",
-  fE:"الأسئلة الشائعة",
   fH:"أسئلة <em>وأجوبة.</em>",
   fL:"لديك سؤال آخر؟ تواصل مع الفريق المنظّم.",
-  faq:[["general","متى تقام إيجنتثون؟","التدريب عن بُعد يومي 4 و5 يناير 2027 من 6:00 إلى 9:00 مساءً، ويوم العرض الحضوري في 6 يناير 2027 في المنطقة الشرقية."],["general","هل المشاركة عن بُعد أم حضورية؟","أمسيتا التدريب عن بُعد، ويوم العرض حضوري في المنطقة الشرقية."],["general","هل المشاركة مجانية؟","نعم، المشاركة في إيجنتثون مجانية."],["general","من يمكنه المشاركة؟","كل مبدع وشغوف من عمر 21 إلى 35 سنة في المنطقة الشرقية، أيًا كان تخصصه، ضمن فرق من 2 إلى 5 أعضاء أو بشكل فردي."],["team","هل يجب أن أكون ضمن فريق؟","لا. يمكنك التسجيل مع فريقك أو بشكل فردي، وسنساعد المسجّلين بشكل فردي على الانضمام إلى فريق قبل بدء التدريب."],["team","كيف يتم تسجيل أعضاء الفريق؟","يسجّل قائد الفريق الطلب ويضيف أسماء جميع الأعضاء وبريدهم الإلكتروني في نموذج واحد."],["team","هل يمكن تغيير قائد الفريق أو أحد الأعضاء بعد التسجيل؟","نعم، بالتواصل مع الفريق المنظّم قبل بدء التدريب."],["team","لدي أكثر من فكرة، هل يمكنني تسجيلها جميعًا؟","يشارك كل فريق بفكرة واحدة في مسار واحد، فاختاروا الفكرة الأقوى."],["participation","ما الذي يُعد وكيلًا مؤهلًا؟","وكيل ذكاء اصطناعي يستخدم الأدوات، ويتخذ القرارات، وينفّذ إجراءات لإنجاز مهمة حقيقية. المحادثة وحدها لا تكفي."],["participation","ما المطلوب تسليمه في النهاية؟","وكيل يعمل، وعرض حيّ أمام لجنة التحكيم يوم العرض يوضّح المستخدم والمشكلة وطريقة عمل الوكيل."],["participation","هل يوجد مرشدون وأدوات؟","نعم، يحصل المشاركون على جلسات إرشاد ووصول إلى الأدوات خلال التدريب."],["participation","هل يجب حضور جميع أعضاء الفريق؟","يُتوقّع حضور جميع أعضاء الفريق لأمسيتي التدريب ويوم العرض."],["participation","هل ستُقدَّم شهادات للمشاركين؟","نعم، يحصل جميع المشاركين على شهادة مشاركة."],["participation","من يملك حقوق الملكية الفكرية للفكرة؟","ستوضَّح ضمن الشروط والأحكام عند فتح التسجيل."],["general","هل التسجيل يعني القبول؟","لا. سيراجع المنظّمون الطلبات ويؤكّدون الفرق المقبولة عبر البريد الإلكتروني."],["general","هل التسجيل مفتوح رسميًا؟","ليس بعد. اترك بياناتك لتكون أول من يعلم عند فتح التسجيل."]],
-  gE:"معاينة طلب المشاركة",
-  gH:"عرّفنا بوكيلك<br>وفريقك!",
-  gL:"اختر المسار الذي يناسب فكرتك، وشاركنا وصف وكيلك الذكي، والفئة التي صُمّم لخدمتها، والمشكلة التي يسعى لحلها، ولماذا تستحق فكرتكم أن تكون جزءًا من إيجنتثون.",
-  g1:"فرق من 2 إلى 5 أعضاء",
-  g2:"أمسيتا تدريب عن بُعد + يوم عرض حضوري",
-  g3:"جوائز بقيمة 16,000 ريال",
-  g4:"مرشدون وأدوات ومنصة للعرض",
+  faq:[["متى تقام إيجنتثون؟", "من 4 إلى 6 يناير 2027: يوما تدريب، ثم يوم العرض."], ["هل المشاركة مجانية؟", "نعم، المشاركة مجانية بالكامل."], ["من يمكنه المشاركة؟", "كل شغوف بالذكاء الاصطناعي من عمر 21 إلى 35 سنة، أيًا كان تخصصه، بشرط الحضور في المنطقة الشرقية يوم العرض."], ["هل يجب أن يكون لدي فريق؟", "يمكنك التسجيل مع فريقك (من 2 إلى 5 أعضاء) أو بمفردك، وسنربطك بمبدعين آخرين."], ["كيف يسجّل الفريق؟", "يسجّل قائد الفريق الطلب ويضيف بيانات جميع الأعضاء في نموذج واحد."], ["هل أحتاج خبرة في البرمجة؟", "ليست شرطًا. الفريق المتنوع أقوى، ويحصل الجميع على جلسات مع خبراء وتوجيه."], ["ماذا سنقدّم في يوم العرض؟", "وكيلًا يعمل، وعرضًا حيًّا أمام لجنة التحكيم."], ["هل سأحصل على شهادة؟", "نعم، يحصل جميع المشاركين على شهادة مشاركة."]],
+  gH:"دورك الآن.",
+  gL:"خطوة واحدة تفصلك عن التحدي، أخبرنا عن نفسك وعن فكرتك.",
   fName:"الاسم الكامل *",
   fEmail:"البريد الإلكتروني *",
   fTrack:"المسار *",
-  fWhat:"صف وكيلك الذكي *",
-  fWho:"لمن صُمّم، وما المشكلة التي يحلّها؟ *",
-  fWhy:"لماذا تستحق فكرتكم أن تكون جزءًا من إيجنتثون؟ *",
+  fWhy:"لماذا تريد المشاركة في إيجنتثون؟ *",
   fNote:"التسجيل لم يُفتح رسميًا بعد؛ هذه معاينة.",
-  submit:"إرسال",
+  submit:"أرسل مشاركتي",
   okMsg:n=>`<b>شكرًا ${n}!</b> التسجيل لم يُفتح رسميًا بعد، لذلك لم يُرسل شيء. سنعلن عند فتح باب التسجيل.`,
-  errMsg:"يُرجى تعبئة جميع الحقول المطلوبة.",
+  errMsg:"يُرجى تصحيح الحقول المحدّدة أعلاه.",
   powered:"بدعم من",
   copy:"© 2027 إيجنتثون. جميع الحقوق محفوظة.",
   lang:"EN",
-  navAbout:"لمن؟",
-  navTeam:"الفريق",
-  inE:"لماذا الآن؟",
   inM:"المملكة العربية السعودية من أسرع دول العالم تبنّيًا للذكاء الاصطناعي، <b>والفرصة اليوم أكبر من أي وقت مضى</b>. <em>فلماذا لا نضعه في الاستخدام الذي يستحقه؟</em> إيجنتثون دعوة لكل مبدع ليبتكر وكلاء <b>ينجزون</b>، لا وكلاء يتحدثون فقط.",
-  in1h:"الفرصة الآن",
-  in1p:"الذكاء الاصطناعي يعيد تشكيل صناعة المحتوى والتسويق والتسوّق، والمبادرون أولًا هم من يقودون التغيير.",
-  in2h:"من الشرقية",
-  in2p:"مواهب المنطقة الشرقية تستحق منصة تُظهر ما تستطيع ابتكاره.",
-  in3h:"نشاركك الخبرة",
-  in3p:"مرشدون وأدوات طوال التدريب، لتنتقل من الفكرة إلى وكيل يعمل.",
-  chK:"التحدي بسيط: لماذا لا نجعل الذكاء الاصطناعي يعمل فعلًا؟",
-  remoteEve:"عن بُعد · من 6 إلى 9 مساءً",
-  tmE:"الفريق",
-  tmH:"فريق صغير. <em>أثر كبير.</em>",
-  tmL:"تشارك ضمن فريق من 2 إلى 5 أعضاء، ويقود الفريق عضو يمثّله أمام المنظّمين.",
-  ts1:"أعضاء في الفريق",
-  ts2:"قائد للفريق",
-  ts3:"فكرة في مسار واحد",
-  howH:"كيف تسجّل فريقك؟",
-  h1s:"كوّن فريقك من 2 إلى 5 أعضاء",
-  h2s:"اختاروا قائدًا للفريق",
-  h4s:"يسجّل القائد الفريق ويضيف بيانات جميع الأعضاء",
-  h5s:"انتظروا رسالة القبول عبر البريد الإلكتروني",
-  soloH:"ليس لديك فريق؟",
-  soloP:"سجّل بشكل فردي، وسنساعدك على الانضمام إلى فريق قبل بدء التدريب.",
-  soloBtn:"سجّل بشكل فردي",
   fType:"طريقة التسجيل *",
   asTeam:"فريق",
   asSolo:"فردي",
@@ -1015,145 +959,103 @@ const T={
   mCount:n=>`${n+1} من 5 أعضاء`,
   soloNote:"سنساعدك على الانضمام إلى فريق قبل بدء التدريب.",
   roles:["مطوّر الوكيل","مصمّم التجربة","خبير المجال","قائد المنتج والعرض"],
-  faqCats:[["all","الكل"],["general","عام"],["team","الفريق"],["participation","المشاركة"]],
-  coE:"هذه دعوة لك",
   coH:"هل أنت مبدع بما يكفي<br><em>لتقبل التحدي؟</em>",
-  coP:"إيجنتثون مفتوح لكل مبدع وشغوف في المنطقة الشرقية. لا يهم تخصصك أو خلفيتك؛ إذا كان المحتوى أو التسويق أو التسوّق يثير فضولك، فمكانك معنا.",
+  coP:"إيجنتثون مفتوح لكل شغوف بالذكاء الاصطناعي، ويُقام في المنطقة الشرقية. لا يهم تخصصك أو خبرتك؛ إذا كان الذكاء الاصطناعي وتطوّره يشدّ انتباهك ويثير فضولك، فمكانك معنا.",
   cb1:"سنة، من 21 إلى 35",
   cb2h:"الشرقية",
-  cb2:"مقيم في المنطقة الشرقية",
-  cb3h:"مبدع وشغوف",
-  cb3:"تحب أن تبني وتجرّب",
-  coTags:"<span>صنّاع المحتوى</span><span>المطوّرون</span><span>المصمّمون</span><span>المسوّقون</span><span>روّاد الأعمال</span><span>كل شغوف بالذكاء الاصطناعي</span>",
+  cb2:"نلتقي حضوريًا في المنطقة الشرقية",
+  cb3h:"شغوف بالذكاء الاصطناعي",
+  cb3:"تحب أن تجرّب وتبتكر",
+  coTags:"<span>فضولي</span><span>مبتكر</span><span>تحب التجربة</span><span>تتعلّم بسرعة</span><span>تحب التحدي</span>",
+  t1p:"طريقة تسوّقنا تتغيّر بسرعة، من اكتشاف المنتج حتى لحظة الشراء.",
+  t2p:"صناعة المحتوى تكبر كل يوم، ومعها تكبر الفرص والمهام والتحديات.",
+  t3p:"كل نشاط تجاري، صغيرًا كان أو كبيرًا، يبحث عن طريقة أذكى ليصل إلى جمهوره ويكبر.",
+  sarL:"ريال سعودي",
+  fPhone:"رقم الجوال *",
+  fCv:"السيرة الذاتية *",
+  cvPick:"اسحب الملف هنا أو اضغط للاختيار",
+  cvHint:"PDF فقط، بحد أقصى 5 ميجابايت",
+  fIdea:"فكرتك باختصار: ماذا سيفعل وكيلك؟ *",
+  eReq:"هذا الحقل مطلوب.",
+  eEmail:"أدخل بريدًا إلكترونيًا صحيحًا.",
+  ePhone:"أدخل رقم جوال صحيحًا، مثل 05xxxxxxxx.",
+  eCvReq:"أرفق سيرتك الذاتية بصيغة PDF.",
+  eCvType:"يجب أن يكون الملف بصيغة PDF.",
+  eCvSize:"حجم الملف أكبر من 5 ميجابايت.",
+  eTrack:"اختر مسارًا.",
+  eMembers:"أدخل اسم كل عضو وبريده الإلكتروني الصحيح.",
+  ptH:"شركاء النجاح",
+  ptOrg:"تنظيم",
+  ptSpon:"الرعاة",
+  ptKath:"كثيب",
   coBtn:"أنا مستعد للتحدي"
  },
  en:{
   nav1:"Challenge",
-  nav2:"Tracks",
-  nav3:"Agenda",
   nav4:"Prizes",
   nav5:"FAQ",
-  register:"Register",
+  register:"Join the challenge",
   explore:"Explore the tracks",
-  h1:"Your idea.<br>An agent that delivers.",
+  h1:"From idea<br>to impact.",
   hsub:"The AI agents hackathon of the Eastern Province.",
-  hlead:"Two days of training, and one Demo Day where your agent proves what it can do.",
   cdD:"Days",
   cdH:"Hours",
   cdM:"Min",
   cdS:"Sec",
   dates:"Jan 4–6, 2027",
-  kick:"Training starts Jan 4 · Demo Day Jan 6",
   marquee:["FREE TO JOIN","16,000 SAR IN PRIZES","JAN 4–6, 2027","EASTERN PROVINCE","AGES 21–35","MENTORS & TOOLS","CERTIFICATES","THREE TRACKS"],
-  chE:"The challenge",
-  chH:"Create an AI agent <em>that gets things done — not just talks.</em>",
-  chL:"Create an AI agent that uses tools, makes decisions and takes actions to complete a real task. Chat-only bots don't qualify.",
-  r1b:"Who benefits?",
-  r1s:"Show us the user your agent is built for.",
-  r2b:"How does it work?",
-  r2s:"The tools, decisions and actions behind it.",
-  r3b:"What does it actually do?",
-  r3s:"A live demo that proves it in front of everyone on Demo Day.",
-  trE:"Tracks",
-  trH:"Three tracks.<br><em>One mark.</em>",
-  trL:"The Agenthon mark is built from three shapes — each one is a track of the hackathon. Scroll to move from one pillar to the next.",
+  chH:"AI is everywhere… <em>the challenge is making it work for us.</em>",
+  chL:"Most AI tools today were built for the whole world, but they don't always understand us. The challenge: create an AI agent that knows our language and culture, and truly serves our community.",
+  r1b:"It understands us",
+  r1s:"Speaks our language and dialect, and knows our culture and way of life.",
+  r2b:"It serves us",
+  r2s:"Solves a real problem people face here.",
+  r3b:"It delivers",
+  r3s:"Carries out the task from start to finish.",
+  trH:"Three tracks.<br><em>Where will you make a difference?</em>",
+  trL:"Shopping, content creators, and marketing… pick the field that inspires you, and create an agent that makes a difference in it.",
   scrollHint:"Scroll to explore",
-  st1:"STATION",
-  st2:"STATION",
-  st3:"STATION",
-  t1h:"Creator Agents",
-  t1q:"How can an AI agent make creators' work easier and give them more room to create?",
-  t1f:"Content creators.",
-  t1s:"Content creation, partnership management, audience growth, income, and easing creators' day-to-day work.",
-  t1m:"Build an AI agent that uses tools and takes real actions to solve a problem or complete a task — not just give answers.",
-  t1c:"How can agents take over repetitive work and give creators more time to create?",
-  t2h:"Brand Marketing Agents",
-  t2q:"How can agents help businesses achieve more growth by working with creators?",
-  t2f:"Businesses and marketing teams that work with creators.",
-  t2s:"Finding the right creators, managing collaborations, measuring performance and improving campaign results.",
-  t2m:"Build an AI agent that uses tools and takes real actions to solve a marketing challenge or improve an existing process.",
-  t2c:"How can agents turn creator collaborations into growth opportunities and better marketing results?",
-  t3h:"Shopping Agents",
-  t3q:"How can agents make the shopping journey easier and smarter, from discovery to the buying decision?",
-  t3f:"Online shoppers.",
-  t3s:"Product discovery, comparing options, finding the best deals, building trust and easing checkout.",
-  t3m:"Build an AI agent that uses tools and takes real actions to ease the shopping journey and solve its pain points.",
-  t3c:"How can agents make shopping easier and smarter, from discovering a product to completing the purchase?",
-  lWho:"For whom?",
-  lFocus:"Focus",
-  lMission:"Your mission",
-  lChal:"The challenge",
-  lOpen:"Open question",
+  st1:"TRACK",
+  st2:"TRACK",
+  st3:"TRACK",
+  t1h:"Shopping Agents",
+  t1q:"How can an AI agent make shopping easier and smarter?",
+  t2h:"Creator Agents",
+  t2q:"How can an AI agent make a creator's journey easier and more creative?",
+  t3h:"Brand Marketing Agents",
+  t3q:"How can an AI agent help brands market and grow smarter?",
   pick:"Choose this track",
-  jE:"Agenda",
-  jH:"Three days. <em>Idea to live agent.</em>",
-  jL:"Two remote training evenings (6:00–9:00 PM) to design and build your agent, then an in-person Demo Day in the Eastern Province.",
+  jH:"Three days. <em>From idea to a working agent.</em>",
   d1:"JAN 04",
   d2:"JAN 05",
   d3:"JAN 06",
-  s1h:"Training 1: Design",
-  s1p:"Kickoff, meet the tracks and mentors, define your user, task and tools.",
-  s2h:"Training 2: Build & run",
-  s2p:"Wire up tools, make your agent act, prepare your demo.",
+  s1h:"Kickoff",
+  s1p:"Sessions with experts and mentoring to shape your idea.",
+  s2h:"Build",
+  s2p:"Develop your agent and make it act, with support from mentors.",
   s3h:"Demo Day",
-  s3p:"Live demos to the judges, then winners announced and awarded.",
-  inperson:"In person",
-  pE:"Prize pool",
-  sar:"SAR",
+  s3p:"Present your agent to the judges, and the results are announced.",
+  pE:"Prizes worth",
   p1:"1st place",
   p2:"2nd place",
   p3:"3rd place",
-  pFine:"Prize amounts are proposed and subject to final approval.",
-  fE:"FAQ",
   fH:"Questions <em>&amp; answers.</em>",
   fL:"Anything else? Reach out to the organizing team.",
-  faq:[["general","When is Agenthon?","Remote training on January 4 and 5, 2027 from 6:00–9:00 PM, and the in-person Demo Day on January 6, 2027 in the Eastern Province."],["general","Is it remote or in person?","The two training evenings are remote; Demo Day is in person in the Eastern Province."],["general","Is participation free?","Yes, taking part in Agenthon is free."],["general","Who can take part?","Any creative, passionate person aged 21–35 in the Eastern Province, whatever their background — in teams of 2–5 or individually."],["team","Do I need a team?","No. Register with your team or on your own — we'll help solo registrants join a team before training starts."],["team","How are team members registered?","The team leader submits the application and adds every member's name and email in one form."],["team","Can we change the leader or a member after registering?","Yes, by contacting the organizing team before training starts."],["team","I have more than one idea — can I register them all?","Each team takes part with one idea in one track, so pick your strongest."],["participation","What counts as a qualifying agent?","An AI agent that uses tools, makes decisions and takes actions to complete a real task. Conversation alone isn't enough."],["participation","What do we deliver at the end?","A working agent and a live demo to the judges on Demo Day, showing the user, the problem and how your agent works."],["participation","Are mentors and tools provided?","Yes, participants get mentoring sessions and access to tools during training."],["participation","Do all team members need to attend?","All team members are expected to attend both training evenings and Demo Day."],["participation","Will participants receive certificates?","Yes, every participant receives a certificate of participation."],["participation","Who owns the intellectual property?","This will be set out in the terms and conditions when registration opens."],["general","Does registering mean I'm accepted?","No. The organizers will review applications and confirm accepted teams by email."],["general","Is registration officially open?","Not yet. Leave your details to be the first to know when it opens."]],
-  gE:"Application preview",
-  gH:"Tell us about your<br>agent and team!",
-  gL:"Pick the track that fits your idea, and share a description of your agent, who it's built for, the problem it solves, and why your idea deserves to be part of Agenthon.",
-  g1:"Teams of 2–5",
-  g2:"2 remote training evenings + in-person Demo Day",
-  g3:"16,000 SAR in prizes",
-  g4:"Mentors, tools and a stage",
+  faq:[["When is Agenthon?", "January 4–6, 2027: two training days, then Demo Day."], ["Is it free to join?", "Yes, participation is completely free."], ["Who can take part?", "Anyone aged 21–35 who is passionate about AI, whatever their background, as long as they can attend Demo Day in the Eastern Province."], ["Do I need a team?", "You can register with your team (2–5 members) or on your own, and we'll connect you with other creators."], ["How does a team register?", "The team leader submits the application and adds all members' details in one form."], ["Do I need coding experience?", "It's not required. Diverse teams are stronger, and everyone gets expert sessions and mentoring."], ["What do we present on Demo Day?", "A working agent, and a live demo in front of the judges."], ["Will I get a certificate?", "Yes, every participant receives a certificate of participation."]],
+  gH:"Your turn.",
+  gL:"One step away from the challenge — tell us about yourself and your idea.",
   fName:"Full name *",
   fEmail:"Email *",
   fTrack:"Track *",
-  fWhat:"Describe your agent *",
-  fWho:"Who is it for, and what problem does it solve? *",
-  fWhy:"Why does your idea deserve to be part of Agenthon? *",
+  fWhy:"Why do you want to take part in Agenthon? *",
   fNote:"Registration isn't officially open yet — this is a preview.",
-  submit:"Submit",
+  submit:"Send my application",
   okMsg:n=>`<b>Thanks, ${n}!</b> Registration isn't officially open yet, so nothing was sent. We'll announce when it opens.`,
-  errMsg:"Please fill in all required fields.",
+  errMsg:"Please fix the highlighted fields above.",
   powered:"Powered by",
   copy:"© 2027 Agenthon. All rights reserved.",
   lang:"عربي",
-  navAbout:"Who",
-  navTeam:"Team",
-  inE:"Why now?",
   inM:"Saudi Arabia is one of the fastest-moving countries in the world in adopting AI, <b>and the opportunity has never been bigger</b>. <em>So why not put it to the use it deserves?</em> Agenthon invites every creative mind to build agents that <b>get things done</b>, not agents that only talk.",
-  in1h:"The moment is now",
-  in1p:"AI is reshaping content, marketing and shopping, and those who move first lead the change.",
-  in2h:"From the Eastern Province",
-  in2p:"The region's talent deserves a stage to show what it can create.",
-  in3h:"We share the know-how",
-  in3p:"Mentors and tools throughout training, to take you from idea to working agent.",
-  chK:"The challenge is simple: why not make AI actually work?",
-  remoteEve:"Remote · 6–9 PM",
-  tmE:"The team",
-  tmH:"Small team. <em>Big impact.</em>",
-  tmL:"Join as a team of 2–5, with one member leading the team and representing it to the organizers.",
-  ts1:"members per team",
-  ts2:"team leader",
-  ts3:"idea, one track",
-  howH:"How to register your team",
-  h1s:"Form a team of 2–5 members",
-  h2s:"Choose a team leader",
-  h4s:"The leader registers the team and adds every member's details",
-  h5s:"Wait for your acceptance email",
-  soloH:"No team yet?",
-  soloP:"Register individually — we'll help you join a team before training starts.",
-  soloBtn:"Register solo",
   fType:"Register as *",
   asTeam:"Team",
   asSolo:"Individual",
@@ -1168,25 +1070,40 @@ const T={
   mCount:n=>`${n+1} of 5 members`,
   soloNote:"We'll help you join a team before training starts.",
   roles:["Agent developer","Experience designer","Domain expert","Product & pitch lead"],
-  faqCats:[["all","All"],["general","General"],["team","Team"],["participation","Participation"]],
-  coE:"This is your call",
   coH:"Are you creative enough<br><em>to take the challenge?</em>",
-  coP:"Agenthon is open to every creative, passionate mind in the Eastern Province. Your major or background doesn't matter — if content, marketing or shopping sparks your curiosity, you belong here.",
+  coP:"Agenthon is open to everyone passionate about AI, and takes place in the Eastern Province. Your major or experience doesn't matter — if AI and how fast it's evolving catches your attention and sparks your curiosity, you belong here.",
   cb1:"years old, 21 to 35",
   cb2h:"Eastern Province",
-  cb2:"based in the Eastern Province",
-  cb3h:"Creative & passionate",
-  cb3:"you love to build and experiment",
-  coTags:"<span>Content creators</span><span>Developers</span><span>Designers</span><span>Marketers</span><span>Entrepreneurs</span><span>Anyone passionate about AI</span>",
+  cb2:"we meet in person in the Eastern Province",
+  cb3h:"Passionate about AI",
+  cb3:"you love to experiment and create",
+  coTags:"<span>Curious</span><span>Inventive</span><span>Loves to experiment</span><span>Fast learner</span><span>Loves a challenge</span>",
+  t1p:"The way we shop is changing fast, from discovering a product to the moment of purchase.",
+  t2p:"Content creation grows every day, and with it the opportunities, tasks and challenges.",
+  t3p:"Every business, big or small, is looking for a smarter way to reach its audience and grow.",
+  sarL:"Saudi riyals",
+  fPhone:"Mobile number *",
+  fCv:"CV *",
+  cvPick:"Drag your PDF here or click to choose",
+  cvHint:"PDF only, max 5 MB",
+  fIdea:"Your idea in brief: what will your agent do? *",
+  eReq:"This field is required.",
+  eEmail:"Enter a valid email address.",
+  ePhone:"Enter a valid mobile number, e.g. 05xxxxxxxx.",
+  eCvReq:"Attach your CV as a PDF.",
+  eCvType:"The file must be a PDF.",
+  eCvSize:"The file is larger than 5 MB.",
+  eTrack:"Choose a track.",
+  eMembers:"Enter each member's name and a valid email.",
+  ptH:"Our partners",
+  ptOrg:"Organized by",
+  ptSpon:"Sponsors",
+  ptKath:"Katheeb",
   coBtn:"I'm up for the challenge"
  }
 };
-let faqCat='all';
 function renderFaq(){const d=T[L];
- document.getElementById('faqcats').innerHTML=d.faqCats.map(([k,v])=>`<button type="button" data-c="${k}" class="${k===faqCat?'on':''}">${v}</button>`).join('');
- document.querySelectorAll('#faqcats button').forEach(b=>b.onclick=()=>{faqCat=b.dataset.c;renderFaq();});
- const items=d.faq.filter(q=>faqCat==='all'||q[0]===faqCat);
- document.getElementById('faqlist').innerHTML=items.map((q,i)=>`<details${i===0?' open':''}><summary>${q[1]}<span class="pm">+</span></summary><p>${q[2]}</p></details>`).join('');}
+ document.getElementById('faqlist').innerHTML=d.faq.map((q,i)=>`<details${i===0?' open':''}><summary>${q[0]}<span class="pm">+</span></summary><p>${q[1]}</p></details>`).join('');}
 let members=[{n:'',e:'',r:''}];
 function roleOpts(sel){const d=T[L];return `<option value="">${d.rolePh}</option>`+d.roles.map((r,i)=>`<option value="${i}"${String(sel)===String(i)?' selected':''}>${r}</option>`).join('');}
 function esc(v){return String(v).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
@@ -1210,8 +1127,12 @@ function apply(){
   document.getElementById('lang').textContent=d.lang;
   const star='<svg viewBox="0 0 146.1 165.6"><use href="#mark"/></svg>';
   const h=d.marquee.map(w=>`<span>${w}${star}</span>`).join('');document.getElementById('mq').innerHTML=h+h;
+  document.querySelectorAll('[data-tl]').forEach(el=>el.setAttribute('aria-label',d[el.dataset.tl]));
   renderFaq();
   renderMembers();
+  renderCv();
+  document.querySelectorAll('#form .fe').forEach(e=>e.textContent='');
+  document.querySelectorAll('#form .bad').forEach(e=>e.classList.remove('bad'));
   splitManifesto();
   document.getElementById('ok').classList.remove('show');
 }
@@ -1265,7 +1186,6 @@ function litManifesto(){const m=document.getElementById('manifesto');if(!m)retur
 addEventListener('scroll',litManifesto,{passive:true});
 document.querySelectorAll('input[name=rtype]').forEach(r=>r.addEventListener('change',syncType));
 document.getElementById('addm').onclick=()=>{if(members.length<4){members.push({n:'',e:'',r:''});renderMembers();}};
-document.getElementById('solobtn').addEventListener('click',()=>{const r=document.querySelector('input[name=rtype][value=solo]');r.checked=true;syncType();});
 
 // mobile sticky CTA
 (function(){const m=document.getElementById('mcta'),r=document.getElementById('register');
@@ -1281,9 +1201,53 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)retur
 document.querySelectorAll('.count').forEach(el=>cio.observe(el));
 document.querySelectorAll('.tcard').forEach(c=>c.addEventListener('mousemove',e=>{const b=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-b.left)+'px');c.style.setProperty('--my',(e.clientY-b.top)+'px');}));
 document.querySelectorAll('.tpick').forEach(a=>a.addEventListener('click',()=>{const r=document.querySelector(`input[name=track][value=${a.dataset.track}]`);if(r)r.checked=true;}));
+// ---- registration form: CV picker + validation ----
+var MAXCV=5*1024*1024,cvIn=document.querySelector('#form input[name=cv]'),drop=document.getElementById('drop');
+function fmtSize(b){return b<1024*1024?Math.max(1,Math.round(b/1024))+' KB':(b/1048576).toFixed(1)+' MB';}
+function renderCv(){if(typeof cvIn==='undefined')return;const f=cvIn.files&&cvIn.files[0],el=document.getElementById('cvname');
+ el.textContent=f?`${f.name} · ${fmtSize(f.size)}`:T[L].cvPick;drop.classList.toggle('has',!!f);}
+function cvError(){const f=cvIn.files&&cvIn.files[0],d=T[L];
+ if(!f)return d.eCvReq;
+ if(!(f.type==='application/pdf'||/\.pdf$/i.test(f.name)))return d.eCvType;
+ if(f.size>MAXCV)return d.eCvSize;return '';}
+cvIn.addEventListener('change',()=>{renderCv();clearErr(drop);const m=cvIn.files[0]&&cvError();if(m)showErr(drop,m);});
+['dragenter','dragover'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add('over');}));
+['dragleave','dragend','drop'].forEach(t=>drop.addEventListener(t,()=>drop.classList.remove('over')));
+drop.addEventListener('drop',e=>{e.preventDefault();const fs=e.dataTransfer&&e.dataTransfer.files;if(!fs||!fs.length)return;
+ try{const dt=new DataTransfer();dt.items.add(fs[0]);cvIn.files=dt.files;}catch(_){cvIn.files=fs;}
+ cvIn.dispatchEvent(new Event('change'));});
+function errBox(el){const box=el.closest('.f,.fl,.cvf,.members');return box&&box.querySelector(':scope>.fe');}
+function showErr(el,msg){el.classList.add('bad');const fe=errBox(el);if(fe&&!fe.textContent)fe.textContent=msg;}
+function clearErr(el){el.classList.remove('bad');const fe=errBox(el);if(fe)fe.textContent='';}
+const EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+function normPhone(v){return v.replace(/[٠-٩]/g,c=>'٠١٢٣٤٥٦٧٨٩'.indexOf(c)).replace(/[۰-۹]/g,c=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(c)).replace(/[\s\-().]/g,'');}
+const PHONE=/^(?:\+966|00966|966|0)?5\d{8}$/;
+function validate(f){const d=T[L],bad=[];
+ f.querySelectorAll('.fe').forEach(e=>e.textContent='');f.querySelectorAll('.bad').forEach(e=>e.classList.remove('bad'));
+ const el=n=>f.elements.namedItem(n),val=n=>el(n).value.trim();
+ const flag=(node,msg)=>{showErr(node,msg);bad.push(node);};
+ if(!val('name'))flag(el('name'),d.eReq);
+ if(!val('email'))flag(el('email'),d.eReq);else if(!EMAIL.test(val('email')))flag(el('email'),d.eEmail);
+ if(!val('phone'))flag(el('phone'),d.eReq);else if(!PHONE.test(normPhone(val('phone'))))flag(el('phone'),d.ePhone);
+ const cvm=cvError();if(cvm){showErr(drop,cvm);bad.push(cvIn);}
+ if(f.dataset.type!=='solo'){
+  if(!val('teamname'))flag(el('teamname'),d.eReq);
+  const mfe=document.getElementById('mfe');let mbad=false;
+  f.querySelectorAll('#mlist input').forEach(i=>{const v=i.value.trim(),ok=i.dataset.k==='e'?EMAIL.test(v):!!v;if(!ok){i.classList.add('bad');bad.push(i);mbad=true;}});
+  if(mbad)mfe.textContent=d.eMembers;}
+ const opts=f.querySelector('.opts');if(!f.querySelector('input[name=track]:checked')){opts.classList.add('bad');const fe=opts.parentElement.querySelector(':scope>.fe');fe.textContent=d.eTrack;bad.push(f.querySelector('input[name=track]'));}
+ if(!val('idea'))flag(el('idea'),d.eReq);
+ if(!val('why'))flag(el('why'),d.eReq);
+ return bad;}
+document.getElementById('form').addEventListener('input',e=>{const t=e.target;if(t.classList.contains('bad')){clearErr(t);if(t.closest('#mlist')&&!document.querySelector('#mlist .bad'))document.getElementById('mfe').textContent='';}});
+document.getElementById('form').addEventListener('change',e=>{if(e.target.name==='track'){const o=document.querySelector('#form .opts');o.classList.remove('bad');o.parentElement.querySelector(':scope>.fe').textContent='';}});
 document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();const f=e.target,ok=document.getElementById('ok');
- if(!f.checkValidity()){ok.className='ok show err';ok.textContent=T[L].errMsg;const bad=f.querySelector(':invalid');bad&&bad.focus();return;}
- const n=f.name.value.trim().split(/\s+/)[0].replace(/[<>&"]/g,'');ok.className='ok show';ok.innerHTML=T[L].okMsg(n);});
+ const bad=validate(f);
+ if(bad.length){ok.className='ok show err';ok.textContent=T[L].errMsg;const b=bad[0];(b.type==='file'?drop:b).scrollIntoView({block:'center',behavior:'smooth'});b.focus({preventScroll:true});return;}
+ // NOTE: not connected to a destination yet — nothing is sent anywhere.
+ const n=val0(f);ok.className='ok show';ok.innerHTML=T[L].okMsg(n);});
+function val0(f){return f.elements.namedItem('name').value.trim().split(/\s+/)[0].replace(/[<>&"]/g,'');}
+renderCv();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
